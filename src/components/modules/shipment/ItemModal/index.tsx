@@ -39,7 +39,7 @@ const ItemModal = ({ open, handleClose, config }: Props) => {
     const dispatch = useDispatch<AppDispatch>();
 
     const itemToBeEdited: ShipmentItem | undefined = useSelector((state: RootState) => selectShipmentItem(state, config.id!));
-
+console.log(itemToBeEdited,"item")
     const [item, setItem] = React.useState({ origin: '', destination: '', estimatedDelivery: '', status: '' });
 
     React.useEffect(() => {
@@ -85,6 +85,7 @@ const ItemModal = ({ open, handleClose, config }: Props) => {
                         value={item.origin}
                         onChange={handleChange}
                         sx={{ m: 2, width: 'calc(100% - 32px)' }}
+                        disabled={config.op === 'edit' }
                     />
                     <OutlinedInput
                         name="destination"
@@ -92,6 +93,7 @@ const ItemModal = ({ open, handleClose, config }: Props) => {
                         value={item.destination}
                         onChange={handleChange}
                         sx={{ m: 2, width: 'calc(100% - 32px)' }}
+                        disabled={config.op === 'edit' }
                     />
                     <OutlinedInput
                         name="status"
@@ -106,6 +108,7 @@ const ItemModal = ({ open, handleClose, config }: Props) => {
                         value={item.estimatedDelivery}
                         onChange={handleChange}
                         sx={{ m: 2, width: 'calc(100% - 32px)' }}
+                        disabled={config.op === 'edit' }
                     />
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 2 }}>

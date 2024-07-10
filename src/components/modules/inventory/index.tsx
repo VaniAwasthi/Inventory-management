@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteInventoryItem, fetchInventoryItems, selectInvetoryItems, selectIsFetchingInventoryItems } from '../../../reducer/inventory.reducer';
 import { AppDispatch } from '../../../store';
 import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
-import { Box, Button, IconButton, TextField, InputAdornment } from '@mui/material';
+import { Box, Button, IconButton, TextField, InputAdornment, Typography } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SearchIcon from '@mui/icons-material/Search';
@@ -89,6 +89,8 @@ const Inventory: React.FC = () => {
           <>Loading...</>
         ) : (
           <>
+            <Typography variant='h5'>Inventory Management</Typography>
+
             <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
               <TextField
                 placeholder="Search..."

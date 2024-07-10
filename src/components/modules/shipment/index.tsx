@@ -3,16 +3,15 @@ import Layout from '../../layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../../../store';
 import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
-import { Box, Button, IconButton, TextField, InputAdornment } from '@mui/material';
+import { Box, Button, IconButton, TextField, InputAdornment, Typography } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
 import SearchIcon from '@mui/icons-material/Search';
 import ItemModal from './ItemModal';
 import { fetchShipmentItems, selectIsFetchingShipmentItems, selectShipmentItems } from '../../../reducer/shipment.reducer';
 
 type ModalConfig = {
   op: 'edit' | 'add',
-  shipmentId?: number;
+  id?: number;
 }
 
 const renderHeader = (label: string): React.ReactNode => (
@@ -64,7 +63,7 @@ const Shipment: React.FC = () => {
           <Box display="flex" alignItems="center">
             <IconButton
               color="primary"
-              onClick={() => setModalConfig({ shipmentId: params.row.id, op: 'edit' })}
+              onClick={() => setModalConfig({ id: params.row.id, op: 'edit' })}
             >
               <EditIcon style={{ color: 'green' }} />
             </IconButton>
@@ -82,7 +81,9 @@ const Shipment: React.FC = () => {
           <>Loading...</>
         ) : (
           <>
-            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+           <Typography variant='h5'>Shipment Management</Typography>
+            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2} mt={2}>
+             
               <TextField
                 placeholder="Search..."
                 value={searchQuery}
