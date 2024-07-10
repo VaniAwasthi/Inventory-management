@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Apples",
+        "sku": "apple",
+        "quantity": 100,
+        "warehouse": "Shimla"
+    },
+    {
+        "id": 2,
+        "name": "Mangoes",
+        "sku": "mango",
+        "quantity": 200,
+        "warehouse": "Shimla"
+    },
+    {
+        "id": 3,
+        "name": "Kiwi",
+        "sku": "kiwi",
+        "quantity": 10,
+        "warehouse": "Solan"
+    }
+]

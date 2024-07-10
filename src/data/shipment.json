@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "origin":"Delhi",
+        "destination":"Haridwar",
+        "status":"Transit",
+       "estimatedDelivery":"16/07/12"
+    },
+    {
+        "id":2,
+        "origin":"Delhi",
+        "destination":"Shimla",
+        "status":"Delivered",
+         "estimatedDelivery":"30/07/12"
+    },
+    {
+        "id":3,
+        "origin":"TamilNadu",
+        "destination":"Karnataka",
+        "status":"Delayed",
+         "estimatedDelivery":"01/08/12"
+    },
+    {
+        "id":4,
+        "origin":"Banglore",
+        "destination":"Delhi",
+        "status":"Delayed",
+         "estimatedDelivery":"16/08/12"
+    }
+]
